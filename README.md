@@ -34,3 +34,16 @@ Install ONNX Runtime:
     cd onnxruntime
     ./build.sh --config Release --build_shared_lib --parallel
 ```
+
+## Usage
+
+1. Build the Project
+Clone the repository and build using CMake:
+
+```
+    git clone https://github.com/DanielSarmiento04/yolov11cpp
+    cd yolov11cpp
+    mkdir build && cd build
+    cmake ..
+    make
+```
