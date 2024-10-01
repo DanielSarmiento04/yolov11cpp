@@ -17,14 +17,6 @@ void applyLetterbox(const Mat& src, Mat& dst, int inputWidth, int inputHeight) {
     copyMakeBorder(dst, dst, yOffset, inputHeight - newHeight - yOffset, xOffset, inputWidth - newWidth - xOffset, BORDER_CONSTANT, Scalar(114, 114, 114));
 }
 
-// Preprocess the input image
-Mat preprocessImage(const Mat& img, int inputWidth, int inputHeight) {
-    Mat result;
-    applyLetterbox(img, result, inputWidth, inputHeight);
-    applyHistogramEqualization(result);  // Optional step for better contrast
-    return result;
-}
-
 // Apply histogram equalization to enhance contrast
 void applyHistogramEqualization(Mat& img) {
     Mat ycrcb;
@@ -35,3 +27,13 @@ void applyHistogramEqualization(Mat& img) {
     merge(channels, ycrcb);
     cvtColor(ycrcb, img, COLOR_YCrCb2BGR);
 }
+
+// Preprocess the input image
+Mat preprocessImage(const Mat& img, int inputWidth, int inputHeight) {
+    Mat result;
+    applyLetterbox(img, result, inputWidth, inputHeight);
+    applyHistogramEqualization(result);  // Optional step for better contrast
+    return result;
+}
+
+
