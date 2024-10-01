@@ -1,4 +1,7 @@
-# yolov11cpp
+<h1 align="center">Yolo V11 cpp</h1>
+
+<h3 align="center"> Jose Sarmiento | josedanielsarmiento219@gmail.com</h3>
+
 
 ## Resume
 
