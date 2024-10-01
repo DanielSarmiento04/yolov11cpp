@@ -26,6 +26,14 @@ To build and run the project, you need the following dependencies:
 
 Install OpenCV:
 
+
+```bash
+    conda create -n yolo11 python=3.11
+    conda activate yolo11
+
+    pip install -r requirements.txt
+```
+
 ```bash
     sudo apt-get install libopencv-dev
 ```
